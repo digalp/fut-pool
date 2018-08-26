@@ -40,5 +40,14 @@ namespace FutPool.Controllers
 
             return team;
         }
+
+        [HttpPost]
+        public ActionResult CreateTeam([FromForm] Team team)
+        {
+            _context.Teams.Add(team);
+            _context.SaveChanges();
+
+            return CreatedAtRoute("GetTeam", new { id = team.Id }, team);
+        }
     }
 }

@@ -1,21 +1,13 @@
-function addItem() {
-    const item = {
-        'name': $('#add-name').val(),
-        'isComplete': false
-    };
+import { getData, addTeam } from './service.js';
 
-    $.ajax({
-        type: 'POST',
-        accepts: 'application/json',
-        url: uri,
-        contentType: 'application/json',
-        data: JSON.stringify(item),
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert('here');
-        },
-        success: function (result) {
-            getData();
-            $('#add-name').val('');
-        }
-    });
-}
+//let saveTeam = addTeam;
+$('#add-team-btn').click(function (e) {
+    e.preventDefault();
+    let teamName = $('#add-team-text').val();
+    addTeam(teamName).done(getData);
+})
+
+
+$(document).ready(function () {
+    getData();
+});

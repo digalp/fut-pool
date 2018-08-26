@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>To-do CRUD</title>
+    <title>FutPool CRUD</title>
     <style>
         input[type='submit'],
         button,
@@ -38,40 +38,19 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>To-do CRUD</h1>
+            <h1>FutPool</h1>
         </div>
         <div>
             <h3 class="ml-sm-3">Add</h3>
-            <form class="form-inline" action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <form class="form-inline" id="add-team-form">
                 <div class="form-group mx-sm-3 mb-2">
-                    <input class="form-control" id="add-name" type="text" placeholder="New to-do">
+                    <input class="form-control" id="add-team-text" type="text" placeholder="New team">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Add</button>
+                <button id="add-team-btn" type="submit" class="btn btn-primary mb-2">Add</button>
             </form>
         </div>
-
-        <!-- <div id="spoiler">
-            <h3>Edit</h3>
-            <form class="my-form">
-                <input type="hidden" id="edit-id">
-                <input type="checkbox" id="edit-isComplete">
-                <input type="text" id="edit-name">
-                <input type="submit" value="Edit">
-                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-            </form>
-        </div> -->
-
+        <div id="output"></div>
         <p id="counter"></p>
-
-        <table>
-            <tr>
-                <th>Is Complete</th>
-                <th>Name</th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tbody id="todos"></tbody>
-        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
