@@ -24,9 +24,9 @@ namespace FutPool
         public void ConfigureServices(IServiceCollection services)
         {
             _devDbConnectionString = Configuration["ConnectionStrings:FutPoolConnection"];
-            services.AddDbContext<FutPoolContext>(opt => opt.UseInMemoryDatabase("Teams"));
-            // services.AddEntityFrameworkNpgsql()
-            //     .AddDbContext<FutPoolContext>(opt => opt.UseNpgsql(_devDbConnectionString));
+            //services.AddDbContext<FutPoolContext>(opt => opt.UseInMemoryDatabase("Teams"));
+            services.AddEntityFrameworkNpgsql()
+                .AddDbContext<FutPoolContext>(opt => opt.UseNpgsql(_devDbConnectionString));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
