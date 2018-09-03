@@ -13,9 +13,6 @@ $(document).ready(function () {
     getData();
 });
 
-// if (module.hot) {
-//     console.warn('module is hot');
-//     module.hot.accept('./service.js', function () {
-//         console.log('Accepting the updated service module!');
-//     })
-// }
+if (module.hot) {
+    module.hot.accept();
+}

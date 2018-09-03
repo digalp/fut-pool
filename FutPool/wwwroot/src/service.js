@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const uri = 'api/futpool'
+const uri = 'api/futpool';
 
 function getData() {
     return $.get(uri, function (data) {
@@ -20,6 +20,10 @@ function addTeam(teamName) {
     }).fail(function () {
         console.error('addTeam failed');
     });
+}
+
+if (module.hot) {
+    module.hot.accept();
 }
 
 export { getData, addTeam };
