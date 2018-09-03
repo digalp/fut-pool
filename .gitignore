@@ -6,3 +6,4 @@
 bin
 obj/
 .gitignore.swp
+node_modules/

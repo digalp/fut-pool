@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const uri = 'api/futpool'
 
 function getData() {

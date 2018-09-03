@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace FutPool
 {
@@ -36,9 +37,15 @@ namespace FutPool
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    //HotModuleReplacementEndpoint = "/__webpack_hmr"
+                });
             }
             else
             {
+                //app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
@@ -46,6 +53,17 @@ namespace FutPool
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseMvc();
+
+            // app.UseMvc(routes =>
+            // {
+            //     routes.MapRoute(
+            //         name: "default",
+            //         template: "{controller=Home}/{action=Index}/{id?}");
+
+            //     routes.MapSpaFallbackRoute(
+            //         name: "spa-fallback",
+            //         defaults: new { controller = "Home", action = "Index" });
+            // });
         }
     }
 }

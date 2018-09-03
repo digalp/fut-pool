@@ -11633,6 +11633,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
+      "Microsoft.AspNetCore.SpaServices >= 2.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.2",
       "Microsoft.EntityFrameworkCore.Tools.Dotnet >= 2.0.3",
       "Microsoft.Extensions.SecretManager.Tools >= 2.0.2",
@@ -11647,11 +11648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\FutPool.csproj",
+      "projectUniqueName": "C:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\FutPool.csproj",
       "projectName": "FutPool",
-      "projectPath": "c:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\FutPool.csproj",
+      "projectPath": "C:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\FutPool.csproj",
       "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\obj\\",
+      "outputPath": "C:\\Users\\Diego\\Projects\\fut-pool\\fut-pool\\FutPool\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11684,6 +11685,10 @@
             "target": "Package",
             "version": "[2.1.1, )",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.SpaServices": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
