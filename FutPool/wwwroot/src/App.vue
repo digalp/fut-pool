@@ -1,17 +1,30 @@
 <template>
     <div id="app">
-        <div class="container">
+        <div class="container-fluid">
             <div class="jumbotron">
                 <h1>FutPool</h1>
             </div>
             <div>
-                <h3 class="ml-sm-3">Add blah blah......</h3>
-                <form class="form-inline" id="add-team-form">
-                    <div class="form-group mx-sm-3 mb-2">
-                        <input class="form-control" id="add-team-text" type="text" placeholder="New team">
+                <div>
+                    <div>{{ selectedResult }}</div>
+                    <div class="btn-group btn-group-justified btn-group-toggle">
+                        <label class="btn btn-secondary" :class="{ 'active focus': selectedResult === 'Home' }">
+                            <input type="radio" name="result" value="Home" id="option1" autocomplete="off"
+                                v-model="selectedResult"
+                                @click="handleClickOnResultOption"> Home
+                        </label>
+                        <label class="btn btn-secondary" :class="{'active focus': selectedResult === 'Tie' }">
+                            <input type="radio" name="result" value="Tie" id="option2" autocomplete="off"
+                                v-model="selectedResult"
+                                @click="handleClickOnResultOption"> Tie
+                        </label>
+                        <label class="btn btn-secondary" :class="{ 'active focus': selectedResult === 'Visitor' }">
+                            <input type="radio" name="result" value="Visitor" id="option3" autocomplete="off"
+                                v-model="selectedResult"
+                                @click="handleClickOnResultOption"> Visitor
+                        </label>
                     </div>
-                    <button id="add-team-btn" type="submit" class="btn btn-primary mb-2">Add</button>
-                </form>
+                </div>
             </div>
             <div id="output"></div>
             <p id="counter"></p>
@@ -20,7 +33,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function() {
+    return { selectedResult: null };
+  },
+  methods: {
+    handleClickOnResultOption(event) {
+      console.warn("Click on result!");
+      console.warn("event", event);
+      console.warn("selectedResult", this.selectedResult);
+    }
+  }
+};
 </script>
 
 <style>
