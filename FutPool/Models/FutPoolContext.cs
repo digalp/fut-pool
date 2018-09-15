@@ -9,5 +9,9 @@ namespace FutPool.Models
         }
 
         public DbSet<Team> Teams { get; set; }
+
+        public DbSet<League> Leagues { get; set; }
+
+        public DbSet<Tournament> Tournaments { get; set; }
     }
 }
