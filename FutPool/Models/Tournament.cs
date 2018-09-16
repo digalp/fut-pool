@@ -13,6 +13,8 @@ namespace FutPool.Models
         [Required]
         public League League { get; set; }
 
-        public ICollection<Team> Teams { get; set; }
+        public ICollection<TeamTournament> TeamTournaments { get; set; }
+
+        public ICollection<Matchday> Matchdays { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace FutPool.Models
@@ -8,5 +9,7 @@ namespace FutPool.Models
 
         [Required]
         public string Name { get; set; }
+
+        public ICollection<TeamTournament> TeamTournaments { get; set; }
     }
 }
