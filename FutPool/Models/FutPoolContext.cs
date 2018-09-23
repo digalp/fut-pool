@@ -11,6 +11,7 @@ namespace FutPool.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TeamTournament>().HasKey(t => new { t.TeamId, t.TournamentId });
+            modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
 

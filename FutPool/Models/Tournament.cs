@@ -7,6 +7,8 @@ namespace FutPool.Models
     {
         public int Id { get; set; }
 
+        public int LeagueId { get; set; }
+
         [Required]
         public string Name { get; set; }
 
